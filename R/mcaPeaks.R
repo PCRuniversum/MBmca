@@ -1,4 +1,4 @@
-"mcaPeaks" <- function(x, y, span = 3) {
+mcaPeaks <- function(x, y, span = 3) {
   # Take the x and y values from the object of type data.frame.
   
   options(warn = -1)
@@ -47,5 +47,5 @@
 		      )
   colnames(p.max) <- c("T (maxima)", "F (maxima)")
   
-  return(list(p.min = p.min, p.max = p.max))
+  list(p.min = p.min, p.max = p.max)
 } 

@@ -1,4 +1,4 @@
-"mcaSmoother" <- function(x, y, bgadj = FALSE, bg = NULL, Trange = NULL, 
+mcaSmoother <- function(x, y, bgadj = FALSE, bg = NULL, Trange = NULL, 
 				minmax = FALSE, df.fact = 0.95, n = NULL) {
   options(warn = -1)
   # Test if df.fact is within a meaningful range.
@@ -84,5 +84,5 @@
   
   # Returns an object of the type data.frame containing the temperature in the first column 
   # and the pre-processed fluorescence data in the second column.
-  return(xy = data.frame(x,y.norm))
+  data.frame(x,y.norm)
 }

@@ -1,7 +1,8 @@
-"MFIerror" <- function(x, y, CV = FALSE, RSD = FALSE, rob = FALSE, 
+MFIerror <- function(x, y, CV = FALSE, RSD = FALSE, rob = FALSE, 
 		       errplot = TRUE, type = "p", pch = 19, length = 0.05, 
 		       col = "black") {
   #Define if "robust" or standard function should be used as measures
+  old.warn <- options("warn")[[1]]
   options(warn = -1)
   #Test if x and y exist.
   if (is.null(x)) 
@@ -69,7 +70,10 @@
 		   length = length, col = col)
       }
   }
+  #change warning value to previous
+  options(warn = old.warn)
+  
   # res is the an object of the type data.frame containing the 
   # temperature, location, deviation and coefficient of variance.
-  return(res = res)
+  res
 }
