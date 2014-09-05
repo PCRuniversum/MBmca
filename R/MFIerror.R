@@ -70,7 +70,7 @@ MFIerror <- function(x, y, CV = FALSE, RSD = FALSE, rob = FALSE,
 		   length = length, col = col)
       }
   }
-  #change warning value to previous
+  #restore old warning value
   options(warn = old.warn)
   
   # res is the an object of the type data.frame containing the 

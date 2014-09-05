@@ -4,6 +4,7 @@
                     derivlimits = FALSE, derivlimitsline = FALSE, 
                     vertiline = FALSE, rsm = FALSE, inder = FALSE) { 
   # Test if fws (number of neighbors) is within a meaningful range.
+  old.warn <- options("warn")[["warn"]]
   options(warn = -1)
   fws <- round(fws)
   if (fws < 2 || fws > 8) 
@@ -15,7 +16,6 @@
   x <- xy[, 1]
   y <- xy[, 2]
   
-  options(warn = -1)
   # Test if x and y exist.
   if (is.null(x)) 
     stop("Enter temperature")
@@ -97,29 +97,29 @@
   colnames(Rsq) <- c("fw", "Rsqr")
   for (i in 1L:fws) {
     Rsq[i, 1] <- list.res[[i]][[1]]
-    Rsq[i, 2] <- list.res[[i]][[8]]$adj.r.squared
+    Rsq[i, 2] <- list.res[[i]][[8]][["adj.r.squared"]]
   }
   list.res <- list.res[[which(Rsq[, 2] == max(na.omit(Rsq[, 2])))]]
   names(list.res) <- list("fw", "limits.xQ", "limits.diffQ", 
                           "fluo.x", "lm2", "coeflm2", 
                           "coeflm2.y", "lm2sum")
   
-  limits.xQ <- list.res$limits.xQ
-  limits.diffQ <- list.res$limits.diffQ
+  limits.xQ <- list.res[["limits.xQ"]]
+  limits.diffQ <- list.res[["limits.diffQ"]]
   
-  fluo.x <- list.res$fluo.x
+  fluo.x <- list.res[["fluo.x"]]
   names(fluo.x) <- c("Signal hight at approximate Tm")
   
-  lm2 <- list.res$lm2
-  coeflm2 <- list.res$coeflm2
-  coeflm2.y <- list.res$coeflm2.y
-  lm2sum <- list.res$lm2sum
+  lm2 <- list.res[["lm2"]]
+  coeflm2 <- list.res[["coeflm2"]]
+  coeflm2.y <- list.res[["coeflm2.y"]]
+  lm2sum <- list.res[["lm2sum"]]
   # fw <- list.res$fw
   
   # Polynom to fit the area of the calculated Tm
   poly.fct <- function(xi) coeflm2[1] + coeflm2[2] * xi + coeflm2[3] * xi^2
   # Calculate the Tm and assign meaningful names to variables
-  abl <- -lm2$coefficients[2] / (2 * lm2$coefficients[3])
+  abl <- -lm2[["coefficients"]][2] / (2 * lm2[["coefficients"]][3])
   names(abl) <- "Calculated Tm"
   y <-	coeflm2[1] + coeflm2[2] * abl + coeflm2[3] * abl^2
   names(y) <- c("Signal hight at calculated Tm")
@@ -156,31 +156,32 @@
   
   if (warn && dev.sum[1] > 5) {
     message("Approximate and calculated Tm varri. This is an expected behaviour \nbut the calculation should be confirmed with a plot (see examples of diffQ).")
+    #TO DO: maybe incorporate print into message?
     print(dev.sum)
   }
+  
+  
   
   # Calculates the Root Mean Squared Error
   NRMSE <- function(model = model, mes = mes) {
     RMSE <- sqrt(mean(residuals(model)^2))
     NRMSE <- RMSE / (max(mes) - min(mes))
-    if(NRMSE > 0.08) {
-      NRMSE.warning <- "NRMSE bad"
-    } else (NRMSE.warning <- "NRMSE ok")
-    return(list(NRMSE = NRMSE, RMSE = RMSE, 
-                NRMSE.warning = NRMSE.warning))
+    NRMSE.warning <- ifelse(NRMSE > 0.08, "NRMSE bad", "NRMSE ok")
+    list(NRMSE = NRMSE, RMSE = RMSE, 
+         NRMSE.warning = NRMSE.warning)
   }
   
   NRMSE.res <- NRMSE(model = lm2, mes = limits.diffQ)
   
   # Simple test if data come from noise or presumably a melting curve
-  if (warn && shapiro.test(xy[, 2])$p.value >= 0.0000001) {
+  if (warn && shapiro.test(xy[, 2])[["p.value"]] >= 10e-8) {
     message("The distribution of the curve data indicates noise.\nThe data should be visually inspected with a plot (see examples of diffQ).")
   }
   # Simple test if polynomial fit performed accaptable
   if (warn && (max(na.omit(Rsq[, 2])) < 0.85))
     message(paste0("The Tm calculation (fit, adj. R squared ~ ", 
                    round(max(na.omit(Rsq[, 2])), 3), 
-                   ", NRMSE ~ ", round(NRMSE.res$NRMSE, 3), 
+                   ", NRMSE ~ ", round(NRMSE.res[["NRMSE"]], 3), 
                    ") is not optimal presumably due to noisy data.\nCheck raw melting curve (see examples of diffQ).")
     )
   
@@ -203,6 +204,9 @@
             col = "orange", lwd = 2)
     }
   }
+  
+  #restore old warning value
+  options(warn = old.warn)
   
   # Returns an object of the type list containing the data and 
   # data.frames from above including the approximate difference 

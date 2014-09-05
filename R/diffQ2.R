@@ -18,13 +18,13 @@ diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE,
                 warn = warn)
   
   if (TmD1[["temperature"]][["mean.T.delta"]] >= 0.5) {
-    tmp.xy <- predict(smooth.spline(TmD1$xy[, 1], TmD1$xy[, 2]), 
-                      seq(min(TmD1$xy[, 1]), max(TmD1$xy[, 1]), 
+    tmp.xy <- predict(smooth.spline(TmD1[["xy"]][, 1], TmD1[["xy"]][, 2]), 
+                      seq(min(TmD1[["xy"]][, 1]), max(TmD1[["xy"]][, 1]), 
                           TmD1[["temperature"]][["mean.T.delta"]] / 1.3))
-    xy.smoothed <- data.frame(tmp.xy$x, tmp.xy$y)
-  } else (xy.smoothed <-  data.frame(TmD1$xy[, 1], 
-                                     smooth.spline(TmD1$xy[, 1], 
-                                                   TmD1$xy[, 2])$y)
+    xy.smoothed <- data.frame(tmp.xy[["x"]], tmp.xy[["y"]])
+  } else (xy.smoothed <-  data.frame(TmD1[["xy"]][, 1], 
+                                     smooth.spline(TmD1[["xy"]][, 1], 
+                                                   TmD1[["xy"]][, 2])[["y"]])
   )
   
   # Calculates the second derivative and from the first derivative for the 
@@ -58,37 +58,37 @@ diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE,
   if (plot) {
     # Plot the first derivative
     par(fig = c(0,1,0.475,1))
-    plot(TmD1$xy, xlab = "Temperature", ylab = "-d(F) / dT", type = "b")
-    abline(v = (TmD1$Tm), col = "grey", lwd = 1.25)
-    abline(v = (Tm1D2$Tm), col = "grey")
-    abline(v = (Tm2D2$Tm), col = "grey")
-    points(TmD1$limits.xQ, TmD1$limits.diffQ, col = "orange", pch = 19)
-    points(TmD1$Tm, TmD1$fluoTm, pch = 19, col = 2)
-    curve(poly.fct.TmD1, TmD1$limits.xQ[1], TmD1$limits.xQ[length(TmD1$limits.xQ)], col = "red", add = TRUE)
+    plot(TmD1[["xy"]], xlab = "Temperature", ylab = "-d(F) / dT", type = "b")
+    abline(v = (TmD1[["Tm"]]), col = "grey", lwd = 1.25)
+    abline(v = (Tm1D2[["Tm"]]), col = "grey")
+    abline(v = (Tm2D2[["Tm"]]), col = "grey")
+    points(TmD1[["limits.xQ"]], TmD1[["limits.diffQ"]], col = "orange", pch = 19)
+    points(TmD1[["Tm"]], TmD1[["fluoTm"]], pch = 19, col = 2)
+    curve(poly.fct.TmD1, TmD1[["limits.xQ"]][1], TmD1[["limits.xQ"]][length(TmD1[["limits.xQ"]])], col = "red", add = TRUE)
     if (derivlimits) {
-      points(TmD1$limits.xQ, TmD1$limits.diffQ, cex = 1, pch = 19, col = col)
+      points(TmD1[["limits.xQ"]], TmD1[["limits.diffQ"]], cex = 1, pch = 19, col = col)
     }
     
     # Plot the second derivative
     par(fig = c(0,1,0,0.525), new = TRUE)
-    plot(Tm1D2$xy, xlim = c(min(TmD1$xy[, 1]), max(TmD1$xy[, 1])), 
+    plot(Tm1D2[["xy"]], xlim = c(min(TmD1[["xy"]][, 1]), max(TmD1[["xy"]][, 1])), 
          xlab = "Temperature", ylab = "-d^2(F) / dT^2", type = "b")
-    abline(v = (TmD1$Tm), col = "grey")
-    points(Tm1D2$limits.xQ, Tm1D2$limits.diffQ, col = "green", pch = 19)
-    points(Tm2D2$limits.xQ, Tm2D2$limits.diffQ, col = "blue", pch = 1)
-    points(Tm1D2$Tm, Tm1D2$fluo.x, pch = 19, col = 2)
-    points(Tm2D2$Tm, Tm2D2$fluo.x, pch = 19, col = 2)
-    curve(poly.fct.Tm1D2, Tm1D2$limits.xQ[1], Tm1D2$limits.xQ[length(Tm1D2$limits.xQ)], col = "red", add = TRUE)
-    curve(poly.fct.Tm2D2, Tm2D2$limits.xQ[1], Tm2D2$limits.xQ[length(Tm2D2$limits.xQ)], col = "red", add = TRUE)
+    abline(v = (TmD1[["Tm"]]), col = "grey")
+    points(Tm1D2[["limits.xQ"]], Tm1D2[["limits.diffQ"]], col = "green", pch = 19)
+    points(Tm2D2[["limits.xQ"]], Tm2D2[["limits.diffQ"]], col = "blue", pch = 1)
+    points(Tm1D2[["Tm"]], Tm1D2[["fluo.x"]], pch = 19, col = 2)
+    points(Tm2D2[["Tm"]], Tm2D2[["fluo.x"]], pch = 19, col = 2)
+    curve(poly.fct.Tm1D2, Tm1D2[["limits.xQ"]][1], Tm1D2[["limits.xQ"]][length(Tm1D2[["limits.xQ"]])], col = "red", add = TRUE)
+    curve(poly.fct.Tm2D2, Tm2D2[["limits.xQ"]][1], Tm2D2[["limits.xQ"]][length(Tm2D2[["limits.xQ"]])], col = "red", add = TRUE)
   }
   
   # Returns an object of the type list containing the data and data.frames from above including the approximate 
   # difference quotient values, melting temperatures of the first derivative and the second derivative, intensities and used neighbors.
   if (verbose) {
     list(TmD1 = TmD1, Tm1D2 = Tm1D2, Tm2D2 = Tm2D2, xTm1.2.D2 = x, 
-         yTm1.2.D2 = y, temperature = TmD1$temperature)
+         yTm1.2.D2 = y, temperature = TmD1[["temperature"]])
   } else {
-    list(Tm = TmD1$Tm, fluoTm = TmD1$fluoTm, 
+    list(Tm = TmD1[["Tm"]], fluoTm = TmD1[["fluoTm"]], 
          xTm1.2.D2 = x, yTm1.2.D2 = y)
   }
   

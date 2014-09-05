@@ -1,6 +1,7 @@
 mcaPeaks <- function(x, y, span = 3) {
   # Take the x and y values from the object of type data.frame.
   
+  old.warn <- options("warn")[["warn"]]
   options(warn = -1)
   # Test if x and y exist.
   if (is.null(x)) 
@@ -17,7 +18,7 @@ mcaPeaks <- function(x, y, span = 3) {
   }
 
   # smooth the input data slightly with a spline
-  input.y <- smooth.spline(x, y)$y
+  input.y <- smooth.spline(x, y)[["y"]]
 
   # Estimate the local minima and local maxima
   # autor Brian Ripley, https://stat.ethz.ch/pipermail/r-help/2002-May/021934.html
@@ -46,6 +47,9 @@ mcaPeaks <- function(x, y, span = 3) {
 		      out[which(maxima == TRUE), 2]
 		      )
   colnames(p.max) <- c("T (maxima)", "F (maxima)")
+  
+  #restore old warning value
+  options(warn = old.warn)
   
   list(p.min = p.min, p.max = p.max)
 } 

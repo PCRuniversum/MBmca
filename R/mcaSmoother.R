@@ -1,5 +1,7 @@
 mcaSmoother <- function(x, y, bgadj = FALSE, bg = NULL, Trange = NULL, 
 				minmax = FALSE, df.fact = 0.95, n = NULL) {
+  
+  old.warn <- options("warn")[["warn"]]
   options(warn = -1)
   # Test if df.fact is within a meaningful range.
   if (df.fact < 0.6 || df.fact > 1.1) 
@@ -43,20 +45,20 @@ mcaSmoother <- function(x, y, bgadj = FALSE, bg = NULL, Trange = NULL,
   # Test if y contains missing values. In case of missing values a regression is 
   # used to estimate the missing value.
   if (length(which(is.na(y) == TRUE)) > 0) { 
-      y[which(is.na(y))] <- approx(x, y, n = length(x))$y[c(which(is.na(y)))]
+      y[which(is.na(y))] <- approx(x, y, n = length(x))[["y"]][c(which(is.na(y)))]
   }
 
   # Smooth the curve with a cubic spline. Takes first the degree of freedom from the cubic spline.
   # The degree of freedom is than used to smooth the curve by a user defined factor.
-  df.tmp <- data.frame(smooth.spline(x,y)$df)
-  y.sp <- smooth.spline(x, y, df = (df.tmp * df.fact))$y
+  df.tmp <- data.frame(smooth.spline(x,y)[["df"]])
+  y.sp <- smooth.spline(x, y, df = (df.tmp * df.fact))[["y"]]
   
   if (!is.null(n)) {
       if (n < 0.1 || n > 10) 
 	  stop("n must be a number between 0.1 and 10")
 	  tmp.xy <- spline(x, y.sp, n = n * length(x))
 	  x <- tmp.xy$x
-	  y.sp <- tmp.xy$y
+	  y.sp <- tmp.xy[["y"]]
   }
 
   # If the argument bgadj is set TRUE, bg must be  used to define a temperature range for a linear 
@@ -81,6 +83,9 @@ mcaSmoother <- function(x, y, bgadj = FALSE, bg = NULL, Trange = NULL,
   if (minmax) {
       y.norm <- (y.norm - min(y.norm)) / (max(y.norm) - min(y.norm))
   }
+  
+  #restore old warning value
+  options(warn = old.warn)
   
   # Returns an object of the type data.frame containing the temperature in the first column 
   # and the pre-processed fluorescence data in the second column.
