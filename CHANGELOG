@@ -1,6 +1,11 @@
+Changes from Version 0.0.3-4 to 0.0.3-5 [XXX XX XX]
+* New contributor
+* Logo for package
+* Latest source code hosted at github.com/michbur/MBmca/ now
+
 Changes from Version 0.0.3-3 to 0.0.3-4 [August 21 2014]
 * new parameter error.message (set TRUE by default) in diffQ and diffQ2. 
-  The parameter can be used to stop flodding the output with error warnings.
+  The parameter can be used to stop flooding the output with error warnings.
 
 Changes from Version 0.0.3-2 to 0.0.3-3 [June 25 2014]
 * Maintenance release
