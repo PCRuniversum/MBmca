@@ -1,5 +1,4 @@
-MBmca
-==========
+![MBmca](https://github.com/michbur/chipPCR/blob/master/inst/MBmca_logo.png)
 
 The MBmca package provides data sets and lightweight utilities for nucleic acid melting curve analysis and presentation on microbead surfaces.
 
