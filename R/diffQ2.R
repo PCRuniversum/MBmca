@@ -85,12 +85,13 @@ diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE,
   # Returns an object of the type list containing the data and data.frames from above including the approximate 
   # difference quotient values, melting temperatures of the first derivative and the second derivative, intensities and used neighbors.
   if (verbose) {
-    list(TmD1 = TmD1, Tm1D2 = Tm1D2, Tm2D2 = Tm2D2, xTm1.2.D2 = x, 
+    res <- list(TmD1 = TmD1, Tm1D2 = Tm1D2, Tm2D2 = Tm2D2, xTm1.2.D2 = x, 
          yTm1.2.D2 = y, temperature = TmD1[["temperature"]])
   } else {
-    list(Tm = TmD1[["Tm"]], fluoTm = TmD1[["fluoTm"]], 
+    res <- list(Tm = TmD1[["Tm"]], fluoTm = TmD1[["fluoTm"]], 
          xTm1.2.D2 = x, yTm1.2.D2 = y)
   }
-  
+  class(res) <- "diffQ2object"
+  res
   
 }

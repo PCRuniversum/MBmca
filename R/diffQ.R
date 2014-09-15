@@ -108,7 +108,7 @@
   limits.diffQ <- list.res[["limits.diffQ"]]
   
   fluo.x <- list.res[["fluo.x"]]
-  names(fluo.x) <- c("Signal hight at approximate Tm")
+  names(fluo.x) <- c("Signal height at approximate Tm")
   
   lm2 <- list.res[["lm2"]]
   coeflm2 <- list.res[["coeflm2"]]
@@ -122,7 +122,7 @@
   abl <- -lm2[["coefficients"]][2] / (2 * lm2[["coefficients"]][3])
   names(abl) <- "Calculated Tm"
   y <-	coeflm2[1] + coeflm2[2] * abl + coeflm2[3] * abl^2
-  names(y) <- c("Signal hight at calculated Tm")
+  names(y) <- c("Signal height at calculated Tm")
   
   # Optional draw line of calculated approximate derivative.
   if ((!plot) && (.Device != "null device")) {
@@ -213,7 +213,7 @@
   # quotient values, melting temperatures, intensities and used 
   #neighbors.
   if (verbose) {
-    list(Tm = abl, fluoTm = y, 
+    res <- list(Tm = abl, fluoTm = y, 
          Tm.approx = dev[1], fluo.x = fluo.x, 
          xy = out, limits.xQ = limits.xQ, 
          limits.diffQ = limits.diffQ,
@@ -223,6 +223,8 @@
          temperature = temperature, 
          fit = summary(list.res$lm2))
   } else {
-    list(Tm = abl, fluoTm = y)
+    res <- list(Tm = abl, fluoTm = y)
   }
+  class(res) <- "diffQobject"
+  res
 }
