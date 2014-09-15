@@ -1,7 +1,7 @@
-MBmca
+![MBmca](https://github.com/michbur/MBmca/tree/master/inst/MBmca_logo.png)
 ==========
 
-The MBmca package provides data sets and lightweight utilities for nucleic acid melting curve analysis and presentation on microbead surfaces.
+The MBmca package provides data sets and lightweight utilities for nucleic acid melting curve analysis and presentation on microbead surfaces but also for reactions in solution (e.g., qPCR).
 
 
 Installation
