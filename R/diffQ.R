@@ -157,7 +157,7 @@
   if (warn && dev.sum[1] > 5) {
     message("Approximate and calculated Tm varri. This is an expected behaviour \nbut the calculation should be confirmed with a plot (see examples of diffQ).")
     #TO DO: maybe incorporate print into message?
-    print(dev.sum)
+    message(dev.sum)
   }
   
   
