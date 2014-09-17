@@ -145,9 +145,9 @@ in \code{diffQ}). The approximate peak value is the starting-point for a
 function based calculation. The function takes a defined number n (maximum
 8) of the left and the right neighbor values and fits a quadratic
 polynomial. The quadratic regression of the X (temperature) against the Y
-(fluorescence) range gives the coefficients.  The optimal quadratic
+(fluorescence) range gives the coefficients. The optimal quadratic
 polynomial is chosen based on the highest adjusted R-squared value.
-\code{diffQ} returns an objects of the class \code{list}.  To accessing
+\code{diffQ} returns an objects of the class \code{list}. To accessing
 components of lists is done as described elsewhere either by name or by
 number. \code{diffQ} has a simple plot function. However, for sophisticated
 analysis and plots its recommended to use \code{diffQ} as presented in the

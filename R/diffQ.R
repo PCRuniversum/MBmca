@@ -18,9 +18,9 @@
 #' function based calculation. The function takes a defined number n (maximum
 #' 8) of the left and the right neighbor values and fits a quadratic
 #' polynomial. The quadratic regression of the X (temperature) against the Y
-#' (fluorescence) range gives the coefficients.  The optimal quadratic
+#' (fluorescence) range gives the coefficients. The optimal quadratic
 #' polynomial is chosen based on the highest adjusted R-squared value.
-#' \code{diffQ} returns an objects of the class \code{list}.  To accessing
+#' \code{diffQ} returns an objects of the class \code{list}. To accessing
 #' components of lists is done as described elsewhere either by name or by
 #' number. \code{diffQ} has a simple plot function. However, for sophisticated
 #' analysis and plots its recommended to use \code{diffQ} as presented in the
@@ -415,7 +415,10 @@
   rownames(dev.sum) <- NULL
   
   if (warn && dev.sum[1] > 5) {
-    message("Approximate and calculated Tm varri. This is an expected behaviour \nbut the calculation should be confirmed with a plot (see examples of diffQ).")
+    message("Approximate and calculated Tm varri. 
+            This is an expected behaviour \n
+            but the calculation should be confirmed with a plot 
+            (see examples of diffQ).")
     #TO DO: maybe incorporate print into message?
     message(dev.sum)
   }
@@ -435,14 +438,17 @@
   
   # Simple test if data come from noise or presumably a melting curve
   if (warn && shapiro.test(xy[, 2])[["p.value"]] >= 10e-8) {
-    message("The distribution of the curve data indicates noise.\nThe data should be visually inspected with a plot (see examples of diffQ).")
+    message("The distribution of the curve data indicates noise.\n
+            The data should be visually inspected with a plot 
+            (see examples of diffQ).")
   }
   # Simple test if polynomial fit performed accaptable
   if (warn && (max(na.omit(Rsq[, 2])) < 0.85))
     message(paste0("The Tm calculation (fit, adj. R squared ~ ", 
                    round(max(na.omit(Rsq[, 2])), 3), 
                    ", NRMSE ~ ", round(NRMSE.res[["NRMSE"]], 3), 
-                   ") is not optimal presumably due to noisy data.\nCheck raw melting curve (see examples of diffQ).")
+                   ") is not optimal presumably due to noisy data.\n
+                   Check raw melting curve (see examples of diffQ).")
     )
   
   if (plot) {
