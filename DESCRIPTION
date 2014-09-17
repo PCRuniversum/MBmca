@@ -12,6 +12,7 @@ Authors@R: c(person("Stefan", "Roediger", role = c("aut", "cre"),
     email = "stefan_roediger@gmx.de"),
     person("Michal", "Burdukiewicz", role = "ctb"))
 Description: The MBmca package provides data sets and lightweight utilities for
-    nucleic acid melting curve analysis and presentation on microbead surfaces.
+    nucleic acid melting curve analysis and presentation on microbead surfaces
+    but also for reactions in solution (e.g., qPCR).
 License: GPL (>= 2)
 URL: https://github.com/michbur/MBmca/

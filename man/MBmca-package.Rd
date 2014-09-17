@@ -5,18 +5,18 @@
 \alias{MBmca-package}
 \title{Microbead Surface Nucleic Acid Melting Curve Analysis}
 \description{
-Nucleic acid Melting Curve Analysis is a powerful method to investigate the
-interaction of double stranded nucleic acids. The MBmca package provides
-data sets and lightweight utilities for nucleic acid melting curve analysis
-and presentation on microbead surfaces. Methods include melting curve data
-pre-processing (smooth, normalize, rotate, background subtraction), data
-inspection (comparison of multiplex melting curves) with location parameters
-(mean, median), deviation parameters (standard deviation, median absolute
-deviation, Coefficient of Variation) and calculation of the melting peaks
-including the second derivative. The second derivative melting peaks is
-implemented as parameter to further characterize the melting behavior. Plot
-functions to illustrate data quality, smoothed curves and derivatives are
-available too.
+Nucleic acid Melting Curve Analysis is a powerful method to
+investigate the interaction of double stranded nucleic acids. The MBmca package
+provides data sets and lightweight utilities for nucleic acid melting curve
+analysis and presentation on microbead surfaces. However, the function of the
+package can also be used for the analysis of reactions in solution (e.g., qPCR).
+Methods include melting curve data pre-processing (smooth, normalize, rotate,
+background subtraction), data inspection (comparison of multiplex melting
+curves) with location parameters (mean, median), deviation parameters (standard
+of the melting peaks including the second derivative. The second derivative
+melting peaks is implemented as parameter to further characterize the melting
+behavior. Plot functions to illustrate data quality, smoothed curves and
+derivatives are available too.
 }
 \details{
 \tabular{ll}{ Package: \tab MBmca\cr Type: \tab Package\cr Version: \tab
