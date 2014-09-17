@@ -1,3 +1,67 @@
+#' Multiple comparison of the temperature dependent variance of the refMFI
+#' 
+#' MFIerror is used for a fast multiple comparison of the temperature dependent
+#' variance of the refMFI. MFIerror returns an object of the class data.frame
+#' with columns ``Temperature'', ``Location'' (Mean, Median), ``Deviation''
+#' (Standard Deviation, Median Absolute Deviation) and ``Coefficient of
+#' Variation''.
+#' 
+#' 
+#' @param x is the column of a data frame for the temperature.
+#' @param y are multiple columns of fluorescence values from a
+#' \code{data.frame} (e.g., [, c(1:n)]).
+#' @param CV If \code{CV} is true the coefficient of variation (RSD, CV) is
+#' plotted. If set to FLASE the deviation as Standard Deviation or Median
+#' Absolute Deviation is plotted.
+#' @param RSD Setting the option \code{RSD=TRUE} shows the relative standard
+#' deviation (RSD) in percent.
+#' @param rob Using the option \code{rob} as TRUE the median and the median
+#' absolute deviation (MAD) is plotted instead of the mean and standard
+#' deviation.
+#' @param errplot sets \code{MFIerror()} to plot the results (default). In the
+#' default setting (\code{CV=FALSE}) the mean with the standard deviations is
+#' plotted.
+#' @param type is a graphical parameter setting the plot use lines, points or
+#' both (see \code{\link{plot}}).
+#' @param pch is a graphical parameter used to define the symbol used in the
+#' plot.
+#' @param length \code{length} is a graphical parameter used to define the
+#' length of the error bar used in the plot.
+#' @param col \code{col} is a graphical parameter used to define the color of
+#' the error bar used in the plot.
+#' @return \item{res }{ returns a \code{data.frame} containing the
+#' "Temperature", "Location" (mean, median), "Deviation" (standard deviation,
+#' median absolute deviation), "Coefficient of Variance" (CV, RSD) sequential
+#' in the columns.}
+#' @author Stefan Roediger
+#' @seealso \code{\link{mcaSmoother}}
+#' @keywords deviation
+#' @examples
+#' 
+#' # First Example
+#' # Temperature dependent variance of the refMFI using standard measures 
+#' # (Mean, Standard Deviation (SD)).
+#' # Use Standard Deviation (SD) in the plot
+#' 
+#' data(MultiMelt)
+#' MFIerror(MultiMelt[, 1], MultiMelt[, c(2L:13)])
+#' 
+#' # Second Example
+#' # Temperature dependent relative variance of the refMFI using robust 
+#' # measures (Median, Median Absolute Deviation (MAD)). The parameter 
+#' # errplot is set to FALSE in order to prevent the plot of the 
+#' # coefficient of variation versus the temperature.
+#' 
+#' MFIerror(MultiMelt[, 1], MultiMelt[, c(2L:13)], errplot = FALSE, 
+#' 	  RSD = TRUE, rob = TRUE)
+#' 
+#' # Third Example
+#' # Temperature dependent relative variance of the refMFI using 
+#' # robust measures (Median, Median Absolute Deviation (MAD)).
+#' MFIerror(MultiMelt[, 1], MultiMelt[, c(2L:13)], RSD = TRUE, 
+#'   rob = TRUE)
+#' 
+#' @export MFIerror
 MFIerror <- function(x, y, CV = FALSE, RSD = FALSE, rob = FALSE, 
 		       errplot = TRUE, type = "p", pch = 19, length = 0.05, 
 		       col = "black") {

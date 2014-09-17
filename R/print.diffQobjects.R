@@ -1,3 +1,13 @@
+#' @export
+
+print.diffQobject <- function(x, ..) {
+  cat("Calculated Tm:", x[["Tm"]], "\n")
+  cat("Signal height at calculated Tm:", x[["fluoTm"]], "\n")
+}
+
+
+
+#' @export
 print.diffQ2object <- function(x, ...) {
   converted.x <- x
   class(converted.x) <- "diffQobject"
@@ -7,3 +17,5 @@ print.diffQ2object <- function(x, ...) {
   cat("Calculated 'right' Tm:", x[["xTm1.2.D2"]][2], "\n")
   cat("Calculated 'right' signal height:", x[["yTm1.2.D2"]][2], "\n")
 }
+
+
