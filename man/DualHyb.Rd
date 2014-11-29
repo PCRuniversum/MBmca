@@ -5,9 +5,9 @@
 \title{Surface melting curve data from direct hybridization experiment of short
 oligonucleotide probes with bimodal melting curve pattern.}
 \format{A data frame with the melting curves of three different capture and
-detection probe pairs for HRPT1 and MLC-2v. First column contains the
+detection probe pairs for HPRT1 and MLC-2v. First column contains the
 temperature (in degree Celsius, 0.5 degree Celsius per step) followed by
-melting curves of HRPT1 on 12 microbead populations and melting curves of
+melting curves of HPRT1 on 12 microbead populations and melting curves of
 MLC-2v on 12 microbead populations.  \describe{ \item{list("T")}{a numeric
 vector, Temperature in degree Celsius.}
 
@@ -53,8 +53,8 @@ sequence of VIM contained a mutation at position 41.
 \details{
 The melting curve was conducted with short oligonucleotide probes (direct
 hybridization) and longer probes (dual-hybridization probes) on the surface
-of microbeads (sequences and materials according to Roediger et al.  (2012))
-using the VideoScan platform by Roediger et al. (2012). The dyes and
+of microbeads (sequences and materials according to Roediger et al.  (2013))
+using the VideoScan platform by Roediger et al. (2013). The dyes and
 quencher used were Atto 647N and BHQ2.
 }
 \examples{

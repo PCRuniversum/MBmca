@@ -249,8 +249,8 @@ diffQ2(tmp, fct = min, verbose = FALSE, plot = TRUE)
 
 # Second Example
 # Calculate the maximum fluorescence of a melting curve, Tm,
-# Tm1D2 and Tm2D2 of HRPT1 for 12 microbead populations and assign the
-# values to the matrix HRPT1
+# Tm1D2 and Tm2D2 of HPRT1 for 12 microbead populations and assign the
+# values to the matrix HPRT1
 data(MultiMelt)
 HPRT1 <- matrix(NA,12,4,
 	dimnames = list(colnames(MultiMelt[, 2L:13]),

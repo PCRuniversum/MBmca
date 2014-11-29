@@ -5,27 +5,26 @@
 \title{Surface melting curve data from direct hybridization experiment of short
 oligonucleotides.}
 \format{A data frame with the melting curves of two different capture and
-detection probe pairs for HRPT1 and MLC-2v. First column contains the
+detection probe pairs for HPRT1 and MLC-2v. First column contains the
 temperature (in degree Celsius, 1 degree Celsius per step) followed by
-melting curves of HRPT1 on twelve microbead populations and melting curves
+melting curves of HPRT1 on twelve microbead populations and melting curves
 of MLC-2v on twelve microbead populations.  \describe{ \item{list("T")}{a
 numeric vector for the temperature in degree Celsius}
 \item{list("HPRT1.1")}{a numeric vector, as HPRT1.1 of detection/capture
-probe HPRT1/HPRT1-cap on microbead population 1} \item{list("HPRT1.2")}{a
-numeric vector, as HPRT1.2 on microbead population 2}
-\item{list("HPRT1.3")}{a numeric vector, as HPRT1.3 on microbead population
-3} \item{list("HPRT1.4")}{a numeric vector, as HPRT1.4 on microbead
-population 4} \item{list("HPRT1.5")}{a numeric vector, as HPRT1.5 on
-microbead population 5} \item{list("HPRT1.6")}{a numeric vector, as HPRT1.6
-on microbead population 6} \item{list("HPRT1.7")}{a numeric vector, as
-HPRT1.7 on microbead population 7} \item{list("HPRT1.8")}{a numeric vector,
-as HPRT1.8 on microbead population 8} \item{list("HPRT1.9")}{a numeric
-vector, as HPRT1.9 on microbead population 9} \item{list("HPRT1.10")}{a
-numeric vector, as HPRT1.10 on microbead population 10}
-\item{list("HPRT1.11")}{a numeric vector, as HPRT1.11 on microbead
-population 11} \item{list("HPRT1.12")}{a numeric vector, as HPRT1.12 on
-microbead population 12} \item{list("MLC2v1")}{a numeric vector, as MLC2v1
-of detection/capture probe MLC-2v/MLC-2v-cap on microbead population 1}
+		       probe HPRT1/HPRT1-cap on microbead population 1} 
+\item{list("HPRT1.2")}{a numeric vector, as HPRT1.2 on microbead population 2}
+\item{list("HPRT1.3")}{a numeric vector, as HPRT1.3 on microbead population 3} 
+\item{list("HPRT1.4")}{a numeric vector, as HPRT1.4 on microbead population 4} 
+\item{list("HPRT1.5")}{a numeric vector, as HPRT1.5 on microbead population 5} 
+\item{list("HPRT1.6")}{a numeric vector, as HPRT1.6 on microbead population 6} 
+\item{list("HPRT1.7")}{a numeric vector, as HPRT1.7 on microbead population 7} 
+\item{list("HPRT1.8")}{a numeric vector, as HPRT1.8 on microbead population 8} 
+\item{list("HPRT1.9")}{a numeric vector, as HPRT1.9 on microbead population 9} 
+\item{list("HPRT1.10")}{a numeric vector, as HPRT1.10 on microbead population 10}
+\item{list("HPRT1.11")}{a numeric vector, as HPRT1.11 on microbead population 11} 
+\item{list("HPRT1.12")}{a numeric vector, as HPRT1.12 on microbead population 12} 
+\item{list("MLC2v1")}{a numeric vector, as MLC2v1 of detection/capture probe 
+		      MLC-2v/MLC-2v-cap on microbead population 1}
 \item{list("MLC2v2")}{a numeric vector, as MLC2v2 on microbead population 2}
 \item{list("MLC2v3")}{a numeric vector, as MLC2v3 on microbead population 3}
 \item{list("MLC2v4")}{a numeric vector, as MLC2v4 on microbead population 4}
@@ -34,10 +33,10 @@ of detection/capture probe MLC-2v/MLC-2v-cap on microbead population 1}
 \item{list("MLC2v7")}{a numeric vector, as MLC2v7 on microbead population 7}
 \item{list("MLC2v8")}{a numeric vector, as MLC2v8 on microbead population 8}
 \item{list("MLC2v9")}{a numeric vector, as MLC2v9 on microbead population 9}
-\item{list("MLC2v10")}{a numeric vector, as MLC2v10 on microbead population
-10} \item{list("MLC2v11")}{a numeric vector, as MLC2v11 on microbead
-population 11} \item{list("MLC2v12")}{a numeric vector, as MLC2v12 on
-microbead population 12} }}
+\item{list("MLC2v10")}{a numeric vector, as MLC2v10 on microbead population 10} 
+\item{list("MLC2v11")}{a numeric vector, as MLC2v11 on microbead population 11} 
+\item{list("MLC2v12")}{a numeric vector, as MLC2v12 on microbead population 12} }}
+
 \source{
 Data were measured with the VideoScan platform:
 
@@ -52,16 +51,17 @@ Surface Melting Curve Analysis with R. S. Roediger, A. Boehm and I.
 Schimke. \emph{The R Journal}. 5(2):37--52, 2013, 2013.
 \url{http://journal.r-project.org/}
 }
+
 \description{
 A melting curve experiment with twelve microbead populations and the short
-oligonucleotide capture probe and detection probe for human HRPT1
-(hyperparathyroidism 1) and MLC-2v (myosin regulatory light chain 2,
+oligonucleotide capture probe and detection probe for human HPRT1
+(hypoxanthine phosphoribosyltransferase 1) and MLC-2v (myosin regulatory light chain 2,
 ventricular/cardiac muscle isoform).
 }
 \details{
 The melting curve was conducted with short oligonucleotide probes on the
 surface of microbeads using the VideoScan platform according to Roediger et
-al. (2012). The dyes and quencher used were Atto 647N and BHQ2.
+al. (2013). The dyes and quencher used were Atto 647N and BHQ2.
 }
 \examples{
 data(MultiMelt)
