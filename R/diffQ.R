@@ -421,9 +421,7 @@
     message(warn.approx.calc)
     #TO DO: maybe incorporate print into message?
     message(dev.sum)
-  }
-  
-  
+  } else {warn.approx.calc = "ok"}
   
   # Calculates the Root Mean Squared Error
   NRMSE <- function(model = model, mes = mes) {
@@ -443,12 +441,14 @@
                    ") is not optimal presumably\ndue to noisy data. Check raw melting curve (see examples of diffQ).")
   
   # Simple test if data come from noise or presumably a melting curve
-  if (warn && shapiro.test(xy[, 2])[["p.value"]] >= 10e-8)
+  if (warn && shapiro.test(xy[, 2])[["p.value"]] >= 10e-8) {
     message(message.shapiro.test)
+    } else {message.shapiro.test = "ok"}
   
   # Simple test if polynomial fit performed accaptable
-  if (warn && (max(na.omit(Rsq[, 2])) < 0.85))
+  if (warn && (max(na.omit(Rsq[, 2])) < 0.85)) {
     message(message.polynomial.fit)
+    } else {message.polynomial.fit <- "ok"}
   
   if (plot) {
     plot(xQ, diffQ, xlab = "Temperature", ylab = "-d(F) / dT", 
@@ -483,10 +483,14 @@
          xy = out, limits.xQ = limits.xQ, 
          limits.diffQ = limits.diffQ,
          adj.r.squared = lm2sum$adj.r.squared, 
-         NRMSE = NRMSE.res$NRMSE, 
+         NRMSE = NRMSE.res$NRMSE,
          fws = list.res$fw, devsum=dev.sum, 
          temperature = temperature, 
-         fit = summary(list.res$lm2))
+         fit = summary(list.res$lm2),
+         approx.calc = warn.approx.calc,
+         shapiro.test = message.shapiro.test,
+         polynomial.fit = message.polynomial.fit
+         )
   } else {
     res <- list(Tm = abl, fluoTm = y)
   }
