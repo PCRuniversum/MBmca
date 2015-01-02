@@ -414,11 +414,11 @@
                          "Calculated Tm")
   rownames(dev.sum) <- NULL
   
+  warn.approx.calc <- c("Approximate and calculated Tm varri. This is an expected behaviour \n
+			 but the calculation should be confirmed with a plot (see examples of diffQ).")
+  
   if (warn && dev.sum[1] > 5) {
-    message("Approximate and calculated Tm varri. 
-            This is an expected behaviour \n
-            but the calculation should be confirmed with a plot 
-            (see examples of diffQ).")
+    message(warn.approx.calc)
     #TO DO: maybe incorporate print into message?
     message(dev.sum)
   }
@@ -436,20 +436,19 @@
   
   NRMSE.res <- NRMSE(model = lm2, mes = limits.diffQ)
   
-  # Simple test if data come from noise or presumably a melting curve
-  if (warn && shapiro.test(xy[, 2])[["p.value"]] >= 10e-8) {
-    message("The distribution of the curve data indicates noise.\n
-            The data should be visually inspected with a plot 
-            (see examples of diffQ).")
-  }
-  # Simple test if polynomial fit performed accaptable
-  if (warn && (max(na.omit(Rsq[, 2])) < 0.85))
-    message(paste0("The Tm calculation (fit, adj. R squared ~ ", 
+  message.shapiro.test <- c("The distribution of the curve data indicates noise. The data should be visually \ninspected with a plot (see examples of diffQ).")
+  message.polynomial.fit <- paste0("The Tm calculation (fit, adj. R squared ~ ", 
                    round(max(na.omit(Rsq[, 2])), 3), 
                    ", NRMSE ~ ", round(NRMSE.res[["NRMSE"]], 3), 
-                   ") is not optimal presumably due to noisy data.\n
-                   Check raw melting curve (see examples of diffQ).")
-    )
+                   ") is not optimal presumably\ndue to noisy data. Check raw melting curve (see examples of diffQ).")
+  
+  # Simple test if data come from noise or presumably a melting curve
+  if (warn && shapiro.test(xy[, 2])[["p.value"]] >= 10e-8)
+    message(message.shapiro.test)
+  
+  # Simple test if polynomial fit performed accaptable
+  if (warn && (max(na.omit(Rsq[, 2])) < 0.85))
+    message(message.polynomial.fit)
   
   if (plot) {
     plot(xQ, diffQ, xlab = "Temperature", ylab = "-d(F) / dT", 

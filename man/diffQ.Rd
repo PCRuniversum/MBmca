@@ -127,7 +127,7 @@ temperature.}
 fitting function.}
 }
 \description{
-\code{diffQ} is used to calculate the melting temperature (Tm) but also for
+\code{diffQ} can be used to calculate the melting temperature (Tm) but also for
 elementary graphical operations (e.g., show the Tm or the derivative). It
 does not require smoothed data for the MCA. The parameter \code{rsm} can be
 used to double the temperature resolution by calculation of the mean
