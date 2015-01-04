@@ -19,7 +19,7 @@
 #' @name MBmca-package
 #' @aliases MBmca-package MBmca
 #' @docType package
-#' @author Stefan Roediger <stefan_roediger@gmx.de>
+#' @author Stefan Roediger <stefan_roediger@@gmx.de>
 #' @references A Highly Versatile Microscope Imaging Technology Platform for
 #' the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.
 #' S. Roediger, P. Schierack, A. Boehm, J. Nitschke, I. Berger, U. Froemmel, C.
