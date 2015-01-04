@@ -5,22 +5,22 @@
 \title{Surface melting curve data from direct hybridization experiment of short
 oligonucleotide probes with bimodal melting curve pattern.}
 \format{A data frame with the melting curves of three different capture and
-detection probe pairs for HPRT1 and MLC-2v. First column contains the
+detection probe pairs for HRPT1 and MLC-2v. First column contains the
 temperature (in degree Celsius, 0.5 degree Celsius per step) followed by
-melting curves of HPRT1 on 12 microbead populations and melting curves of
-MLC-2v on 12 microbead populations.  \describe{ \item{list("T")}{a numeric
+melting curves of HRPT1 on 12 microbead populations and melting curves of
+MLC-2v on 12 microbead populations.  \describe{ \item{T}{a numeric
 vector, Temperature in degree Celsius.}
 
-\item{list("MLC2v")}{a numeric vector, MLC-2v with quencher-labeled
+\item{MLC2v}{a numeric vector, MLC-2v with quencher-labeled
 detection probe}
 
-\item{list("SERCA2")}{a numeric vector, SERCA2 without quencher-labeled
+\item{SERCA2}{a numeric vector, SERCA2 without quencher-labeled
 detection probe}
 
-\item{list("VIM.w.Mutation")}{a numeric vector, mutated VIM with
+\item{VIM.w.Mutation}{a numeric vector, mutated VIM with
 quencher-labeled detection probe}
 
-\item{list("VIM.wo.Mutation")}{a numeric vector, native VIM with
+\item{VIM.wo.Mutation}{a numeric vector, native VIM with
 quencher-labeled detection probe} }}
 \source{
 Data were measured with the VideoScan platform:
@@ -53,8 +53,8 @@ sequence of VIM contained a mutation at position 41.
 \details{
 The melting curve was conducted with short oligonucleotide probes (direct
 hybridization) and longer probes (dual-hybridization probes) on the surface
-of microbeads (sequences and materials according to Roediger et al.  (2013))
-using the VideoScan platform by Roediger et al. (2013). The dyes and
+of microbeads (sequences and materials according to Roediger et al.  (2012))
+using the VideoScan platform by Roediger et al. (2012). The dyes and
 quencher used were Atto 647N and BHQ2.
 }
 \examples{

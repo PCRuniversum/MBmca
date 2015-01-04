@@ -9,26 +9,26 @@ Poly(dA)20, aCS and HPRT1. First column contains the temperature (in degree
 Celsius, 1 degree Celsius per step) followed by melting curves of VIM,
 MLC-2v, SERCA2, Poly(dA)20, aCS and HPRT1 with bimodal melting pattern. The
 dyes and quencher used were Atto 647N and BHQ2.  \describe{
-\item{list("T")}{a numeric vector, Temperature in degree Celsius.}
+\item{T}{a numeric vector, Temperature in degree Celsius.}
 
-\item{list("VIM.no.Q")}{a numeric vector, VIM without quencher and without
+\item{VIM.no.Q}{a numeric vector, VIM without quencher and without
 Poly(dT)20 region.}
 
-\item{list("MLC2v.w.Q.w.dT20")}{a numeric vector, MLC-2v with
+\item{MLC2v.w.Q.w.dT20}{a numeric vector, MLC-2v with
 quencher-labeled detection probe and fluorescent Poly(dA)20 detection
 probe.}
 
-\item{list("SERCA2.no.Q.w.dT20")}{a numeric vector, SERCA2 without
+\item{SERCA2.no.Q.w.dT20}{a numeric vector, SERCA2 without
 quencher-labeled detection probe and Poly(dA)20 detection probe.}
 
-\item{list("PolydA20.w.Q")}{a numeric vector, Poly(dT)20 with fluorescent
+\item{PolydA20.w.Q}{a numeric vector, Poly(dT)20 with fluorescent
 Poly(dA)20 detection probe (quencher labeled).}
 
-\item{list("aCS.w.Q.w.dT20")}{a numeric vector, artificial Control Sequence
+\item{aCS.w.Q.w.dT20}{a numeric vector, artificial Control Sequence
 without quencher-labeled detection probe and fluorescent Poly(dA)20
 detection probe.}
 
-\item{list("HPRT1.no.Q.w.dT20")}{a numeric vector, HPRT1 without
+\item{HPRT1.no.Q.w.dT20}{a numeric vector, HPRT1 without
 quencher-labeled detection probe and fluorescent Poly(dA)20 detection
 probe.} }}
 \source{
@@ -50,7 +50,7 @@ A melting curve experiment with six microbead populations and short
 oligonucleotide probes (direct hybridization). Detection probes for human
 VIM (vimentin), MLC-2v (myosin regulatory light chain 2, ventricular/cardiac
 muscle isoform), SERCA2 (Atp2a2 - ATPase, Calcium-transporting ATPase
-sarcoplasmic reticulum type, slow twitch skeletal muscle isoform), HPRT1
+sarcoplasmic reticulum type, slow twitch skeletal muscle isoform), HRPT1
 (hyperparathyroidism 1) and the artificial sequences Poly(dA)20 (20 nt of
 dA) and aCS (artificial Control Sequence).
 }
