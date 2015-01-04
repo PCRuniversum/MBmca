@@ -219,7 +219,7 @@
 #' @references A Highly Versatile Microscope Imaging Technology Platform for
 #' the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.
 #' S. Roediger, P. Schierack, A. Boehm, J. Nitschke, I. Berger, U. Froemmel, C.
-#' Schmidt, M.  Ruhland, I. Schimke, D. Roggenbuck, W. Lehmann and C.
+#' Schmidt, M. Ruhland, I. Schimke, D. Roggenbuck, W. Lehmann and C.
 #' Schroeder.  \emph{Advances in Biochemical Bioengineering/Biotechnology}.
 #' 133:33--74, 2013. \url{http://www.ncbi.nlm.nih.gov/pubmed/22437246}
 #' 
@@ -243,8 +243,8 @@
 #' 
 #' # Second Example
 #' # Calculate the maximum fluorescence of a melting curve, Tm, 
-#' # Tm1D2 and Tm2D2 of HRPT1 for 12 microbead populations and assign the 
-#' # values to the matrix HRPT1
+#' # Tm1D2 and Tm2D2 of HPRT1 for 12 microbead populations and assign the 
+#' # values to the matrix HPRT1
 #' data(MultiMelt)
 #' HPRT1 <- matrix(NA,12,4,
 #' 	dimnames = list(colnames(MultiMelt[, 2L:13]),

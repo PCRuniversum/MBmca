@@ -127,7 +127,7 @@ temperature.}
 fitting function.}
 }
 \description{
-\code{diffQ} is used to calculate the melting temperature (Tm) but also for
+\code{diffQ} can be used to calculate the melting temperature (Tm) but also for
 elementary graphical operations (e.g., show the Tm or the derivative). It
 does not require smoothed data for the MCA. The parameter \code{rsm} can be
 used to double the temperature resolution by calculation of the mean
@@ -272,7 +272,7 @@ Stefan Roediger
 A Highly Versatile Microscope Imaging Technology Platform for
 the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.
 S. Roediger, P. Schierack, A. Boehm, J. Nitschke, I. Berger, U. Froemmel, C.
-Schmidt, M.  Ruhland, I. Schimke, D. Roggenbuck, W. Lehmann and C.
+Schmidt, M. Ruhland, I. Schimke, D. Roggenbuck, W. Lehmann and C.
 Schroeder.  \emph{Advances in Biochemical Bioengineering/Biotechnology}.
 133:33--74, 2013. \url{http://www.ncbi.nlm.nih.gov/pubmed/22437246}
 

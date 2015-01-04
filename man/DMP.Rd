@@ -50,7 +50,7 @@ A melting curve experiment with six microbead populations and short
 oligonucleotide probes (direct hybridization). Detection probes for human
 VIM (vimentin), MLC-2v (myosin regulatory light chain 2, ventricular/cardiac
 muscle isoform), SERCA2 (Atp2a2 - ATPase, Calcium-transporting ATPase
-sarcoplasmic reticulum type, slow twitch skeletal muscle isoform), HRPT1
+sarcoplasmic reticulum type, slow twitch skeletal muscle isoform), HPRT1
 (hyperparathyroidism 1) and the artificial sequences Poly(dA)20 (20 nt of
 dA) and aCS (artificial Control Sequence).
 }
