@@ -8,12 +8,17 @@ Depends:
     robustbase (>= 0.9),
     chipPCR (>= 0.0.7)
 Date: 2021-02-26
-Authors@R: c(person("Stefan", "Roediger", role = c("aut", "cre"),
-    email = "stefan_roediger@gmx.de"),
-    person("Michal", "Burdukiewicz", role = "ctb"))
+Authors@R: c(person("Stefan", "Roediger", 
+	   email = "stefan_roediger@gmx.de",
+	   comment = c(ORCID = "0000-0002-1441-6512"),
+      role = c("cre", "aut")),
+    person("Michal", "Burdukiewicz", 
+      email = "michalburdukiewicz@gmail.com", 
+      comment = c(ORCID = "0000-0001-8926-582X"),
+      role = "aut"))
 Description: The MBmca package provides data sets and lightweight utilities for
     nucleic acid melting curve analysis and presentation on microbead surfaces
     but also for reactions in solution (e.g., qPCR).
 License: GPL (>= 2)
-URL: https://github.com/michbur/MBmca/
+URL: https://github.com/PCRuniversum/MBmca/
 RoxygenNote: 5.0.1
