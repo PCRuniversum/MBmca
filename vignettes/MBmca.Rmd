@@ -1,0 +1,41 @@
+---
+title: "Microbead Surface Nucleic Acid Melting Curve Analysis"
+author: "The chipPCR package authors"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::pdf_document:
+    number_sections: true
+    toc: true
+    toc_depth: 3
+header-includes:
+    - \usepackage[font={small}]{caption}
+bibliography: "MBmca.bib"
+vignette: >
+  %\VignetteIndexEntry{Supplement to: Microbead Surface Nucleic Acid Melting Curve Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The MBmca package was developed for the analysis of melt curve data. 
+Specifically, algorithms were developed for the analysis of the melting behavior 
+of nucleic acid hybrids on the surface of microbeads.
+
+Details on the application of the software are in the publications
+
+- @roediger_RJ_2013
+- @rodiger_r_2015
+
+described.
+
+The software has been lost in conjunction with the VideoScan platform. This is a 
+fully automatic multispectral fluorescence microscope for the multiplex analysis 
+of biomarkers [@roediger_highly_2013]. Applications of the platform can be found 
+in personalized medicine and life sciences [@rodiger_nucleic_2014; @rodiger_quantification_2018; @willitzki_new_2012].
+
+Over the years, a lot of knowledge has accumulated on the analysis of data from 
+quantitative PCRs and melting curves. Thus, we could show that the use of 
+filters and smoothing functions affect the parameter estimation of amplification 
+curves [@spiess_impact_2014]. The MBmca package also applies filters and smoothing functions to melt 
+curves. This should be taken into account when using the software.
+
+# References
