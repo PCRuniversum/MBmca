@@ -36,6 +36,9 @@
 #' @keywords package
 #' @importFrom chipPCR inder
 #' @importFrom robustbase lmrob
+#' @importFrom graphics abline arrows curve lines par points
+#' @importFrom stats approx embed lm mad median na.omit predict residuals sd shapiro.test smooth.spline spline
+#' @importFrom utils head tail
 #' 
 #' 
 NULL
