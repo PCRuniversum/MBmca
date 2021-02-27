@@ -19,10 +19,6 @@ melting peaks is implemented as parameter to further characterize the melting
 behavior. Plot functions to illustrate data quality, smoothed curves and 
 derivatives are available too.
 }
-\details{
-\tabular{ll}{ Package: \tab MBmca\cr Type: \tab Package\cr Version: \tab
-0.0.3-4\cr Date: \tab 2014-08-17\cr License: GPL (>= 2) }
-}
 \references{
 A Highly Versatile Microscope Imaging Technology Platform for
 the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.

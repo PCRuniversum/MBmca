@@ -12,9 +12,7 @@
 #' melting peaks is implemented as parameter to further characterize the melting 
 #' behavior. Plot functions to illustrate data quality, smoothed curves and 
 #' derivatives are available too.
-#' 
-#' \tabular{ll}{ Package: \tab MBmca\cr Type: \tab Package\cr Version: \tab
-#' 0.0.3-4\cr Date: \tab 2014-08-17\cr License: GPL (>= 2) }
+#'
 #' 
 #' @name MBmca-package
 #' @aliases MBmca-package MBmca
