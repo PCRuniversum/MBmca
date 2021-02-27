@@ -1,3 +1,7 @@
+Changes to Version 1.0 [February 2021]
+* The package is on CRAN for quite some time. No significant changes were made during the last years. Therefore, it is considered as stable, which leads to an update to version 1.0.
+* grammar and spelling Improved
+
 Changes from Version 0.0.3-4 to 0.0.3-5 [January 14 2015]
 * New contributor
 * Logo for package

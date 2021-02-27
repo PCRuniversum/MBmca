@@ -5,7 +5,7 @@
 #' provides data sets and lightweight utilities for nucleic acid melting curve 
 #' analysis and presentation on microbead surfaces. However, the function of the 
 #' package can also be used for the analysis of reactions in solution (e.g., qPCR). 
-#' Methods include melting curve data pre-processing (smooth, normalize, rotate, 
+#' Methods include melting curve data preprocessing (smooth, normalize, rotate, 
 #' background subtraction), data inspection (comparison of multiplex melting 
 #' curves) with location parameters (mean, median), deviation parameters (standard 
 #' of the melting peaks including the second derivative. The second derivative 

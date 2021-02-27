@@ -5,10 +5,23 @@
 \title{Calculation of the melting temperatures (Tm, Tm1D2 and Tm2D2) from the first
 and the second derivative}
 \usage{
-diffQ2(xy, fct = max, fws = 8, col = 2, plot = FALSE, verbose = FALSE,
-  peak = FALSE, deriv = FALSE, negderiv = TRUE, derivlimits = FALSE,
-  derivlimitsline = FALSE, vertiline = FALSE, rsm = FALSE,
-  inder = FALSE, warn = TRUE)
+diffQ2(
+  xy,
+  fct = max,
+  fws = 8,
+  col = 2,
+  plot = FALSE,
+  verbose = FALSE,
+  peak = FALSE,
+  deriv = FALSE,
+  negderiv = TRUE,
+  derivlimits = FALSE,
+  derivlimitsline = FALSE,
+  vertiline = FALSE,
+  rsm = FALSE,
+  inder = FALSE,
+  warn = TRUE
+)
 }
 \arguments{
 \item{xy}{is a \code{data.frame} containing in the first column the
@@ -61,7 +74,7 @@ functionality.}
 \item{warn}{diffQ tries to keep the user as informed as possible about the
 quality of the analysis. However, in some scenarios are the warning and
 message about analysis not needed or disturbing.  \code{warn} can be used to
-stop the flodding of the output.}
+stop the swapping of the output.}
 }
 \value{
 \item{$TmD1}{\code{TmD1} returns a comprehensive list (if parameter verbose
@@ -152,7 +165,7 @@ the melting temperature of the "left" melting temperature ("Tm1D2") from the
 second derivative.}
 
 \item{$Tm1D2$devsum}{ returns measures to show the difference between the
-approximate and alculated melting temperature of the "left" melting
+approximate and calculated melting temperature of the "left" melting
 temperature ("Tm1D2") from the second derivative.}
 
 \item{$Tm1D2$fit}{returns the summary of the results of the quadratic model
@@ -236,7 +249,7 @@ Tm2D2. The options are similar to \code{diffQ()}. Both \code{diffQ()} and
 \code{diffQ2()} return objects of the class \code{list}.  To accessing
 components of lists is done as described elsewhere either be name or by
 number. \code{diffQ2} has no standalone plot function. For sophisticated
-analysis and plots its recommended to use \code{diffQ2} as presented in the
+analysis and plots it is recommended to use \code{diffQ2} as presented in the
 examples as part of algorithms.
 }
 \examples{
@@ -305,9 +318,6 @@ diffQ2(tmp, fct = min, verbose = FALSE, plot = TRUE, inder = TRUE)
 par(mfrow = c(1,1))
 
 }
-\author{
-Stefan Roediger
-}
 \references{
 A Highly Versatile Microscope Imaging Technology Platform for
 the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.
@@ -327,5 +337,7 @@ Roediger S, Boehm A, Schimke I. Surface Melting Curve Analysis with R.
 \seealso{
 \code{\link{diffQ}}, \code{\link{mcaSmoother}}
 }
+\author{
+Stefan Roediger
+}
 \keyword{Tm}
-

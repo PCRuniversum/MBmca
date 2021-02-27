@@ -13,13 +13,13 @@
 #' @param CV If \code{CV} is true the coefficient of variation (RSD, CV) is
 #' plotted. If set to FLASE the deviation as Standard Deviation or Median
 #' Absolute Deviation is plotted.
-#' @param RSD Setting the option \code{RSD=TRUE} shows the relative standard
+#' @param RSD Setting the option \code{RSD = TRUE} shows the relative standard
 #' deviation (RSD) in percent.
 #' @param rob Using the option \code{rob} as TRUE the median and the median
 #' absolute deviation (MAD) is plotted instead of the mean and standard
 #' deviation.
 #' @param errplot sets \code{MFIerror()} to plot the results (default). In the
-#' default setting (\code{CV=FALSE}) the mean with the standard deviations is
+#' default setting (\code{CV = FALSE}) the mean with the standard deviations is
 #' plotted.
 #' @param type is a graphical parameter setting the plot use lines, points or
 #' both (see \code{\link{plot}}).

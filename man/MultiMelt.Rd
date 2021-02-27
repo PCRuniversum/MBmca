@@ -5,7 +5,8 @@
 \alias{MultiMelt}
 \title{Surface melting curve data from direct hybridization experiment of short
 oligonucleotides.}
-\format{A data frame with the melting curves of two different capture and
+\format{
+A data frame with the melting curves of two different capture and
 detection probe pairs for HRPT1 and MLC-2v. First column contains the
 temperature (in degree Celsius, 1 degree Celsius per step) followed by
 melting curves of HRPT1 on twelve microbead populations and melting curves
@@ -38,7 +39,8 @@ of detection/capture probe MLC-2v/MLC-2v-cap on microbead population 1}
 \item{MLC2v10}{a numeric vector, as MLC2v10 on microbead population
 10} \item{MLC2v11}{a numeric vector, as MLC2v11 on microbead
 population 11} \item{MLC2v12}{a numeric vector, as MLC2v12 on
-microbead population 12} }}
+microbead population 12} }
+}
 \source{
 Data were measured with the VideoScan platform:
 
@@ -75,4 +77,3 @@ data(MultiMelt)
 \code{\link{DualHyb}}
 }
 \keyword{datasets}
-

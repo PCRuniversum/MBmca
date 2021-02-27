@@ -45,7 +45,7 @@
 #' @param warn diffQ tries to keep the user as informed as possible about the
 #' quality of the analysis. However, in some scenarios are the warning and
 #' message about analysis not needed or disturbing.  \code{warn} can be used to
-#' stop the flodding of the output.
+#' stop the swapping of the output.
 #' @param peak shows the peak in the plot (see examples).
 #' @param negderiv uses the positive first derivative instead of the negative.
 #' @param deriv shows the first derivative with the color assigned to

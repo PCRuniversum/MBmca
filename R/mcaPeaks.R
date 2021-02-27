@@ -18,7 +18,7 @@
 #' @param span \code{span} is used to adjust the window span.
 #' @return \item{p.min }{returns a \code{data.frame} with the temperatures ("T
 #' (minima)") and the fluorescence ("F (minima)") for the local minima of the
-#' processed data. }
+#' processed data.}
 #' 
 #' \item{p.max }{returns a \code{data.frame} with the temperatures ("T
 #' (minima)") and the fluorescence ("F (minima)") for the local maxima of the

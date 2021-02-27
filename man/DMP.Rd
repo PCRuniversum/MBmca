@@ -4,7 +4,8 @@
 \name{DMP}
 \alias{DMP}
 \title{Bimodal melting curve experiment on the surface of microbeads.}
-\format{A data frame with the melting curves of six different capture and
+\format{
+A data frame with the melting curves of six different capture and
 detection probe pairs on six microbeads populations for VIM, MLC-2v, SERCA2,
 Poly(dA)20, aCS and HPRT1. First column contains the temperature (in degree
 Celsius, 1 degree Celsius per step) followed by melting curves of VIM,
@@ -31,7 +32,8 @@ detection probe.}
 
 \item{HPRT1.no.Q.w.dT20}{a numeric vector, HPRT1 without
 quencher-labeled detection probe and fluorescent Poly(dA)20 detection
-probe.} }}
+probe.} }
+}
 \source{
 Data were measured with the VideoScan platform:
 
@@ -66,4 +68,3 @@ data(DMP)
 \code{\link{DualHyb}}
 }
 \keyword{datasets}
-

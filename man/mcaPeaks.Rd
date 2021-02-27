@@ -17,7 +17,7 @@ mcaPeaks(x, y, span = 3)
 \value{
 \item{p.min }{returns a \code{data.frame} with the temperatures ("T
 (minima)") and the fluorescence ("F (minima)") for the local minima of the
-processed data. }
+processed data.}
 
 \item{p.max }{returns a \code{data.frame} with the temperatures ("T
 (minima)") and the fluorescence ("F (minima)") for the local maxima of the
@@ -88,12 +88,11 @@ diffQ(tmp, fct = max, plot = TRUE)
 
 
 }
-\author{
-Stefan Roediger
-}
 \seealso{
 \code{\link{mcaSmoother}}, \code{\link{smooth.spline}}
 }
+\author{
+Stefan Roediger
+}
 \keyword{peaks}
 \keyword{smooth}
-

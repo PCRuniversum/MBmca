@@ -4,10 +4,23 @@
 \alias{diffQ}
 \title{Calculation of the melting temperature (Tm) from the first derivative}
 \usage{
-diffQ(xy, fct = min, fws = 8, col = 2, plot = FALSE, verbose = FALSE,
-  warn = TRUE, peak = FALSE, negderiv = TRUE, deriv = FALSE,
-  derivlimits = FALSE, derivlimitsline = FALSE, vertiline = FALSE,
-  rsm = FALSE, inder = FALSE)
+diffQ(
+  xy,
+  fct = min,
+  fws = 8,
+  col = 2,
+  plot = FALSE,
+  verbose = FALSE,
+  warn = TRUE,
+  peak = FALSE,
+  negderiv = TRUE,
+  deriv = FALSE,
+  derivlimits = FALSE,
+  derivlimitsline = FALSE,
+  vertiline = FALSE,
+  rsm = FALSE,
+  inder = FALSE
+)
 }
 \arguments{
 \item{xy}{is a \code{data.frame} containing in the first column the
@@ -34,7 +47,7 @@ ranges used for calculation, approximate Tm) of the calculation.}
 \item{warn}{diffQ tries to keep the user as informed as possible about the
 quality of the analysis. However, in some scenarios are the warning and
 message about analysis not needed or disturbing.  \code{warn} can be used to
-stop the flodding of the output.}
+stop the swapping of the output.}
 
 \item{peak}{shows the peak in the plot (see examples).}
 
@@ -268,9 +281,6 @@ diffQ(tmp, plot = TRUE, rsm = TRUE)$Tm
 par(mfrow = c(1,1))
 
 }
-\author{
-Stefan Roediger
-}
 \references{
 A Highly Versatile Microscope Imaging Technology Platform for
 the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.
@@ -290,6 +300,8 @@ Roediger S, Boehm A, Schimke I. Surface Melting Curve Analysis with R.
 \seealso{
 \code{\link{diffQ2}}, \code{\link{mcaSmoother}}
 }
+\author{
+Stefan Roediger
+}
 \keyword{Tm}
 \keyword{melting}
-

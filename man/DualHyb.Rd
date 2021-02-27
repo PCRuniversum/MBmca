@@ -5,7 +5,8 @@
 \alias{DualHyb}
 \title{Surface melting curve data from direct hybridization experiment of short
 oligonucleotide probes with bimodal melting curve pattern.}
-\format{A data frame with the melting curves of three different capture and
+\format{
+A data frame with the melting curves of three different capture and
 detection probe pairs for HRPT1 and MLC-2v. First column contains the
 temperature (in degree Celsius, 0.5 degree Celsius per step) followed by
 melting curves of HRPT1 on 12 microbead populations and melting curves of
@@ -22,7 +23,8 @@ detection probe}
 quencher-labeled detection probe}
 
 \item{VIM.wo.Mutation}{a numeric vector, native VIM with
-quencher-labeled detection probe} }}
+quencher-labeled detection probe} }
+}
 \source{
 Data were measured with the VideoScan platform:
 
@@ -69,4 +71,3 @@ data(DualHyb)
 \code{\link{MultiMelt}}
 }
 \keyword{datasets}
-

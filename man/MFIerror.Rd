@@ -4,8 +4,18 @@
 \alias{MFIerror}
 \title{Multiple comparison of the temperature dependent variance of the refMFI}
 \usage{
-MFIerror(x, y, CV = FALSE, RSD = FALSE, rob = FALSE, errplot = TRUE,
-  type = "p", pch = 19, length = 0.05, col = "black")
+MFIerror(
+  x,
+  y,
+  CV = FALSE,
+  RSD = FALSE,
+  rob = FALSE,
+  errplot = TRUE,
+  type = "p",
+  pch = 19,
+  length = 0.05,
+  col = "black"
+)
 }
 \arguments{
 \item{x}{is the column of a data frame for the temperature.}
@@ -17,7 +27,7 @@ MFIerror(x, y, CV = FALSE, RSD = FALSE, rob = FALSE, errplot = TRUE,
 plotted. If set to FLASE the deviation as Standard Deviation or Median
 Absolute Deviation is plotted.}
 
-\item{RSD}{Setting the option \code{RSD=TRUE} shows the relative standard
+\item{RSD}{Setting the option \code{RSD = TRUE} shows the relative standard
 deviation (RSD) in percent.}
 
 \item{rob}{Using the option \code{rob} as TRUE the median and the median
@@ -25,7 +35,7 @@ absolute deviation (MAD) is plotted instead of the mean and standard
 deviation.}
 
 \item{errplot}{sets \code{MFIerror()} to plot the results (default). In the
-default setting (\code{CV=FALSE}) the mean with the standard deviations is
+default setting (\code{CV = FALSE}) the mean with the standard deviations is
 plotted.}
 
 \item{type}{is a graphical parameter setting the plot use lines, points or
@@ -79,11 +89,10 @@ MFIerror(MultiMelt[, 1], MultiMelt[, c(2L:13)], RSD = TRUE,
   rob = TRUE)
 
 }
-\author{
-Stefan Roediger
-}
 \seealso{
 \code{\link{mcaSmoother}}
 }
+\author{
+Stefan Roediger
+}
 \keyword{deviation}
-

@@ -2,12 +2,6 @@
 
 S3method(print,diffQ2object)
 S3method(print,diffQobject)
-importFrom("graphics", "abline", "arrows", "curve", "lines", "par",
-               "points")
-importFrom("stats", "approx", "embed", "lm", "mad", "median",
-               "na.omit", "predict", "residuals", "sd", "shapiro.test",
-               "smooth.spline", "spline")
-importFrom("utils", "head", "tail")
 export(MFIerror)
 export(diffQ)
 export(diffQ2)

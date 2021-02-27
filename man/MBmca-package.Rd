@@ -2,8 +2,8 @@
 % Please edit documentation in R/MBmca-package.R
 \docType{package}
 \name{MBmca-package}
-\alias{MBmca}
 \alias{MBmca-package}
+\alias{MBmca}
 \title{Microbead Surface Nucleic Acid Melting Curve Analysis}
 \description{
 Nucleic acid Melting Curve Analysis is a powerful method to 
@@ -11,7 +11,7 @@ investigate the interaction of double stranded nucleic acids. The MBmca package
 provides data sets and lightweight utilities for nucleic acid melting curve 
 analysis and presentation on microbead surfaces. However, the function of the 
 package can also be used for the analysis of reactions in solution (e.g., qPCR). 
-Methods include melting curve data pre-processing (smooth, normalize, rotate, 
+Methods include melting curve data preprocessing (smooth, normalize, rotate, 
 background subtraction), data inspection (comparison of multiplex melting 
 curves) with location parameters (mean, median), deviation parameters (standard 
 of the melting peaks including the second derivative. The second derivative 
@@ -22,9 +22,6 @@ derivatives are available too.
 \details{
 \tabular{ll}{ Package: \tab MBmca\cr Type: \tab Package\cr Version: \tab
 0.0.3-4\cr Date: \tab 2014-08-17\cr License: GPL (>= 2) }
-}
-\author{
-Stefan Roediger <stefan_roediger@gmx.de>
 }
 \references{
 A Highly Versatile Microscope Imaging Technology Platform for
@@ -43,5 +40,7 @@ Roediger, C. Liebsch, C. Schmidt, W. Lehmann, U. Resch-Genger, U. Schedler,
 P. Schierack. \emph{Microchim Acta} 2014:1--18. DOI:
 10.1007/s00604-014-1243-4
 }
+\author{
+Stefan Roediger <stefan_roediger@gmx.de>
+}
 \keyword{package}
-

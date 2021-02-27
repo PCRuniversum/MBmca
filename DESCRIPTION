@@ -21,4 +21,4 @@ Description: The MBmca package provides data sets and lightweight utilities for
     but also for reactions in solution (e.g., qPCR).
 License: GPL (>= 2)
 URL: https://github.com/PCRuniversum/MBmca/
-RoxygenNote: 5.0.1
+RoxygenNote: 7.1.1

@@ -4,8 +4,16 @@
 \alias{mcaSmoother}
 \title{Function to pre-process melting curve data.}
 \usage{
-mcaSmoother(x, y, bgadj = FALSE, bg = NULL, Trange = NULL,
-  minmax = FALSE, df.fact = 0.95, n = NULL)
+mcaSmoother(
+  x,
+  y,
+  bgadj = FALSE,
+  bg = NULL,
+  Trange = NULL,
+  minmax = FALSE,
+  df.fact = 0.95,
+  n = NULL
+)
 }
 \arguments{
 \item{x}{is the column of a data frame for the temperature.}
@@ -37,11 +45,11 @@ curve data.}
 }
 \value{
 \item{xy }{returns a \code{data.frame} with the temperature ("x") in
-the first and the pre-processed fluorescence values ("y.sp") in the second
+the first and the preprocessed fluorescence values ("y.sp") in the second
 column.}
 }
 \description{
-The function \code{mcaSmoother()} is used for data pre-processing.
+The function \code{mcaSmoother()} is used for data preprocessing.
 Measurements from experimental systems may occasionally include missing
 values (NA). \code{mcaSmoother()} uses \code{approx()} to fill up NAs under
 the assumption that all measurements were equidistant. The original data
@@ -52,9 +60,9 @@ degree of freedom value from the spline and multiplies it with a factor
 between 0.6 and 1.1. Values lower than 1 result in stronger smoothed curves.
 The outcome of the differentiation depends on the temperature resolution of
 the melting curve. It is recommended to use a temperature resolution of at
-least 0.5 degree Celsius. In addition equal distances (e.g., 50 -> 50.5 ->
+least 0.5 degree Celsius. Besides, for the temperature steps equal distances 
 60 degree Celsius) rather than unequal distances (e.g., 50 -> 50.4 -> 60.1
-degree Celsius) for the temperature steps are recommended. The parameter
+(e.g., 50 -> 50.5 -> degree Celsius) are recommended. The parameter
 \code{n} can be used to increase the temperature resolution of the melting
 curve data. \code{mcaSmoother} uses the spline function for this purpose. A
 temperature range for a simple linear background correction. The linear
@@ -66,7 +74,7 @@ have the #same range and similar resolution. Optionally a Min-Max
 normalization between 0 and 1 can be used by setting the option
 \code{minmax} to \code{TRUE}. This is useful in many situations. For
 example, if the fluorescence values between samples vary considerably (e.g.,
-due to high background, different reporter dyes,...), particularly in
+due to high background, different reporter dyes, ...), particularly in
 solution or for better comparison of results.
 }
 \examples{
@@ -207,17 +215,14 @@ par(mfrow = c(2,1))
 # Tm 77.00263, fluoTm -0.1245848
 diffQ(t1f1, plot = TRUE)
 text(60, -0.08, 
-     "Raw data: 35 - 95 degree Celsius,\\n 1 degree Celsius per step")
+     "Raw data: 35 - 95 degree Celsius,\n 1 degree Celsius per step")
 
 # Tm 77.00069, fluoTm -0.1245394
 diffQ(t2f2, plot = TRUE)
 text(60, -0.08, "Raw data: 41.5 - 92.1 degree Celsius,
-      \\n 0.5 degree Celsius per step")
+      \n 0.5 degree Celsius per step")
 par(mfrow = c(1,1))
 
-}
-\author{
-Stefan Roediger
 }
 \references{
 A Highly Versatile Microscope Imaging Technology Platform for
@@ -240,7 +245,9 @@ Roediger S, Boehm A, Schimke I. Surface Melting Curve Analysis with R.
 \code{\link{smooth.spline}}, \code{\link{spline}}, \code{\link{lm}},
 \code{\link{approx}}
 }
+\author{
+Stefan Roediger
+}
 \keyword{background}
 \keyword{normalization}
 \keyword{smooth}
-

@@ -6,7 +6,7 @@
 #' \code{diffQ2()} return objects of the class \code{list}.  To accessing
 #' components of lists is done as described elsewhere either be name or by
 #' number. \code{diffQ2} has no standalone plot function. For sophisticated
-#' analysis and plots its recommended to use \code{diffQ2} as presented in the
+#' analysis and plots it is recommended to use \code{diffQ2} as presented in the
 #' examples as part of algorithms.
 #' 
 #' 
@@ -46,7 +46,7 @@
 #' @param warn diffQ tries to keep the user as informed as possible about the
 #' quality of the analysis. However, in some scenarios are the warning and
 #' message about analysis not needed or disturbing.  \code{warn} can be used to
-#' stop the flodding of the output.
+#' stop the swapping of the output.
 #' @return
 #' 
 #' \item{$TmD1}{\code{TmD1} returns a comprehensive list (if parameter verbose
@@ -137,7 +137,7 @@
 #' second derivative.}
 #' 
 #' \item{$Tm1D2$devsum}{ returns measures to show the difference between the
-#' approximate and alculated melting temperature of the "left" melting
+#' approximate and calculated melting temperature of the "left" melting
 #' temperature ("Tm1D2") from the second derivative.}
 #' 
 #' \item{$Tm1D2$fit}{returns the summary of the results of the quadratic model
@@ -328,7 +328,7 @@ diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE,
   
   # Calculates the second derivative and from the first derivative for the 
   # minimum of the melting curve.
-  Tm1D2 <- diffQ(xy.smoothed, fct = min, fws = fws, verbose =  TRUE, 
+  Tm1D2 <- diffQ(xy.smoothed, fct = min, fws = fws, verbose = TRUE, 
                  col = col, peak = peak, deriv = deriv, negderiv = FALSE, 
                  derivlimits = derivlimits, derivlimitsline = derivlimitsline, 
                  vertiline = vertiline, inder = inder, 

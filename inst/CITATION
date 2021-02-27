@@ -1,0 +1,12 @@
+citHeader("To cite MBmca in publications, please use:")
+
+citEntry(entry = "Article",
+  author = "Stefan Roediger and Alexander Boehm and Ingolf Schimke",
+  title = "Surface Melting Curve Analysis with R",
+  year = "2013",
+  volume = "5",
+  number = "2",
+  pages = "37-53",
+  journal = "The R Jorunal",
+  textVersion = "Roediger, S.; Boehm, A.; Schimke, I. Surface Melting Curve Analysis with R. The R Journal 2013, 5 (2), 37-53."
+)
