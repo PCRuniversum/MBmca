@@ -23,7 +23,7 @@
 #' S. Roediger, P. Schierack, A. Boehm, J. Nitschke, I. Berger, U. Froemmel, C.
 #' Schmidt, M. Ruhland, I. Schimke, D. Roggenbuck, W. Lehmann and C.
 #' Schroeder.  \emph{Advances in Biochemical Bioengineering/Biotechnology}.
-#' 133:35--74, 2013. \url{http://www.ncbi.nlm.nih.gov/pubmed/22437246}
+#' 133:35--74, 2013. \url{https://pubmed.ncbi.nlm.nih.gov/22437246/}
 #' 
 #' Surface Melting Curve Analysis with R. S. Roediger, A. Boehm and I.
 #' Schimke. \emph{The R Journal}. 5(2):37--52, 2013.

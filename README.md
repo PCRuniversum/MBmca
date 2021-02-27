@@ -6,7 +6,7 @@ The MBmca package provides data sets and lightweight utilities for nucleic acid 
 Installation
 ------------
 
-MBmca is available [on CRAN](http://cran.r-project.org/web/packages/MBmca/), so installation is as simple as:
+MBmca is available [on CRAN](https://cran.r-project.org/package=MBmca), so installation is as simple as:
 
 ```
 install.packages("MBmca")
