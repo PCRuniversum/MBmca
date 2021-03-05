@@ -76,7 +76,7 @@
 #' 0.08 and the adjusted R-squared is less than 0.85. A relative deviation
 #' larger than 10 percent will result in a warning. Reducing fws might improve
 #' the result. }
-#' 
+#' \value{}
 #' \item{Tm }{returns the calculated melting temperature ("Tm").}
 #' 
 #' \item{fluoTm }{returns the calculated fluorescence at the calculated melting
@@ -143,6 +143,10 @@
 #' 
 #' Roediger S, Boehm A, Schimke I. Surface Melting Curve Analysis with R.
 #' \emph{The R Journal} 2013;5:37--53.
+#' 
+#' Roediger S et al. R as an Environment for the Reproducible 
+#' Analysis of DNA Amplification Experiments. \emph{The R Journal} 
+#' 2015;7:127--150.
 #' @keywords melting Tm
 #' @examples
 #' 
