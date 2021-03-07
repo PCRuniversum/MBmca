@@ -72,6 +72,7 @@
 #' @keywords smooth background normalization
 #' @examples
 #' 
+#' default.par <- par(no.readonly = TRUE)
 #' # First Example
 #' # Use mcaSmoother with different n to increase the temperature 
 #' # resolution of the melting curve artificially. Compare the 
@@ -214,7 +215,7 @@
 #' diffQ(t2f2, plot = TRUE)
 #' text(60, -0.08, "Raw data: 41.5 - 92.1 degree Celsius,
 #'       \n 0.5 degree Celsius per step")
-#' par(mfrow = c(1,1))
+#' par(default.par)
 #' 
 #' @export mcaSmoother
 mcaSmoother <- function(x, y, bgadj = FALSE, bg = NULL, Trange = NULL, 

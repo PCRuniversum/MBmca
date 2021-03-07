@@ -88,7 +88,6 @@ temperature and the calculated melting temperature, if NRMSE is less than
 0.08 and the adjusted R-squared is less than 0.85. A relative deviation
 larger than 10 percent will result in a warning. Reducing fws might improve
 the result. }
-
 \item{Tm }{returns the calculated melting temperature ("Tm").}
 
 \item{fluoTm }{returns the calculated fluorescence at the calculated melting
@@ -172,6 +171,8 @@ examples as part of algorithms.
 # First Example
 # Plot the first derivative of different samples for single melting curve
 # data. Note that the argument "plot" is TRUE.
+
+default.par <- par(no.readonly = TRUE)
 
 data(MultiMelt)
 par(mfrow = c(1,2))
@@ -278,7 +279,7 @@ diffQ(tmp, plot = TRUE)$Tm
 
 diffQ(tmp, plot = TRUE, rsm = TRUE)$Tm
   text(60, -0.15, "with rsm parameter")
-par(mfrow = c(1,1))
+par(default.par)
 
 }
 \references{
@@ -296,6 +297,10 @@ P. Schierack. \emph{Microchim Acta} 2014:1--18. DOI:
 
 Roediger S, Boehm A, Schimke I. Surface Melting Curve Analysis with R.
 \emph{The R Journal} 2013;5:37--53.
+
+Roediger S et al. R as an Environment for the Reproducible 
+Analysis of DNA Amplification Experiments. \emph{The R Journal} 
+2015;7:127--150.
 }
 \seealso{
 \code{\link{diffQ2}}, \code{\link{mcaSmoother}}

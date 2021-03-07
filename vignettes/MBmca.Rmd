@@ -20,6 +20,13 @@ The MBmca package was developed for the analysis of melt curve data.
 Specifically, algorithms were developed for the analysis of the melting behavior 
 of nucleic acid hybrids on the surface of microbeads.
 
+However, the software is also useful for the analysis of data from melting 
+curves of qPCRs. The \emph{diffQ2()} function approximately calculates the 
+maximum and minimum of the second derivative. These values can also be used as 
+quantification points. For example, the maximum of the second derivative is a 
+frequently used parameter in determining the Cq value of qPCRs. A further 
+application can be the analysis of data from opaque isothermal amplifications.
+
 Details on the application of the software are in the publications
 
 - @roediger_RJ_2013

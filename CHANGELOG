@@ -1,3 +1,6 @@
+Changes to Version 1.0.1 [March 2021]
+* Fix errors in the description file
+
 Changes to Version 1.0 [February 2021]
 * The package is on CRAN for quite some time. No significant changes were made during the last years. Therefore, it is considered as stable, which leads to an update to version 1.0.
 * grammar and spelling Improved

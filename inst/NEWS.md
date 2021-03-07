@@ -1,6 +1,6 @@
 [March 2021]
 The development of the MBmca package began more than 10 years ago. In 2013, 
-chipPCR was published in The R Journal with a followup publication in 2015 also 
+MBmca was published in The R Journal with a followup publication in 2015 also 
 in The R Journal. There are sometimes users who give feedback to the package. Up 
 to a few bugs there were no hints for new features. Recently the package was 
 removed from CRAN due to its connection to the chipPCR package. The later was 

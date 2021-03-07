@@ -76,7 +76,6 @@
 #' 0.08 and the adjusted R-squared is less than 0.85. A relative deviation
 #' larger than 10 percent will result in a warning. Reducing fws might improve
 #' the result. }
-#' \value{}
 #' \item{Tm }{returns the calculated melting temperature ("Tm").}
 #' 
 #' \item{fluoTm }{returns the calculated fluorescence at the calculated melting
@@ -154,6 +153,8 @@
 #' # Plot the first derivative of different samples for single melting curve
 #' # data. Note that the argument "plot" is TRUE.
 #' 
+#' default.par <- par(no.readonly = TRUE)
+#'
 #' data(MultiMelt)
 #' par(mfrow = c(1,2))
 #' sapply(2L:14, function(i) {
@@ -259,7 +260,7 @@
 #' 
 #' diffQ(tmp, plot = TRUE, rsm = TRUE)$Tm
 #'   text(60, -0.15, "with rsm parameter")
-#' par(mfrow = c(1,1))
+#' par(default.par)
 #' 
 #' @export diffQ
 "diffQ" <- function(xy, fct = min, fws = 8, col = 2, plot = FALSE, 

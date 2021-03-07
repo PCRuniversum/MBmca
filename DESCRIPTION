@@ -1,7 +1,7 @@
 Package: MBmca
 Type: Package
-Title: Nucleic Acid Melting Curve Analysis with R
-Version: 1.0
+Title: Nucleic Acid Melting Curve Analysis
+Version: 1.0.1
 LazyData: true
 Depends:
     R (>= 3.0.0),
@@ -23,13 +23,14 @@ Authors@R: c(person("Stefan", "Roediger",
       email = "michalburdukiewicz@gmail.com", 
       comment = c(ORCID = "0000-0001-8926-582X"),
       role = "aut"))
-Description: The MBmca package provides data sets and lightweight utilities for
-    nucleic acid melting curve analysis and presentation on microbead surfaces
-    but also for reactions in solution (e.g., qPCR). The package was described 
-    in detail in the publications Roediger S., Surface Melting Curve Analysis 
-    with R, The R Journal. 5 (2013) 37-53. and Roediger S., R as an Environment 
-    for the Reproducible Analysis of DNA Amplification Experiments, 
-    The R Journal. 7 (2015) 127-150.
+Description: Lightweight utilities for nucleic acid melting curve analysis are 
+    important in life sciences and diagnostics. This software can be used for 
+    the analysis and presentation of melting curve data from microbead-based 
+    assays (surface melting curve analysis) and reactions in solution (e.g., 
+    quantitative PCR (qPCR), real-time isothermal Amplification). Further 
+    information are described in detail in two publications in The R Journal [
+    https://journal.r-project.org/archive/2013-2/roediger-bohm-schimke.pdf; 
+    https://journal.r-project.org/archive/2015-1/RJ-2015-1.pdf].
 License: GPL (>= 2)
 Language: en-US
 VignetteBuilder: knitr

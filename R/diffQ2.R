@@ -237,10 +237,11 @@
 #' @keywords Tm
 #' @examples
 #' 
+#' default.par <- par(no.readonly = TRUE)
 #' # First Example
 #' # Plot the first and the second derivative melting curves of MLC-2v
 #' # for a single melting curve. Should give a warning message but the graph 
-#' # will show you that the calculation is ok
+#' # will show you that the calculation is OK
 #' data(MultiMelt)
 #' tmp <- mcaSmoother(MultiMelt[, 1], MultiMelt[, 14])
 #' diffQ2(tmp, fct = min, verbose = FALSE, plot = TRUE)
@@ -298,7 +299,8 @@
 #' tmp <- mcaSmoother(MultiMelt[, 1], MultiMelt[, 14])
 #' diffQ2(tmp, fct = min, verbose = FALSE, plot = TRUE, inder = FALSE)
 #' diffQ2(tmp, fct = min, verbose = FALSE, plot = TRUE, inder = TRUE)
-#' par(mfrow = c(1,1))
+#'
+#' par(default.par)
 #' 
 #' @export diffQ2
 diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE, 
@@ -359,6 +361,7 @@ diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE,
   
   
   if (plot) {
+    default.par <- par(no.readonly = TRUE)
     # Plot the first derivative
     par(fig = c(0,1,0.475,1))
     plot(TmD1[["xy"]], xlab = "Temperature", ylab = "-d(F) / dT", type = "b")
@@ -383,6 +386,7 @@ diffQ2 <- function(xy, fct = max, fws = 8, col = 2, plot = FALSE,
     points(Tm2D2[["Tm"]], Tm2D2[["fluo.x"]], pch = 19, col = 2)
     curve(poly.fct.Tm1D2, Tm1D2[["limits.xQ"]][1], Tm1D2[["limits.xQ"]][length(Tm1D2[["limits.xQ"]])], col = "red", add = TRUE)
     curve(poly.fct.Tm2D2, Tm2D2[["limits.xQ"]][1], Tm2D2[["limits.xQ"]][length(Tm2D2[["limits.xQ"]])], col = "red", add = TRUE)
+    par(default.par)
   }
   
   # Returns an object of the type list containing the data and data.frames from above including the approximate 
