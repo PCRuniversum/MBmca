@@ -29,8 +29,8 @@ Description: Lightweight utilities for nucleic acid melting curve analysis are
     assays (surface melting curve analysis) and reactions in solution (e.g., 
     quantitative PCR (qPCR), real-time isothermal Amplification). Further 
     information are described in detail in two publications in The R Journal [
-    https://journal.r-project.org/archive/2013-2/roediger-bohm-schimke.pdf; 
-    https://journal.r-project.org/archive/2015-1/RJ-2015-1.pdf].
+    <https://journal.r-project.org/archive/2013-2/roediger-bohm-schimke.pdf>; 
+    <https://journal.r-project.org/archive/2015-1/RJ-2015-1.pdf>].
 License: GPL (>= 2)
 Language: en-US
 VignetteBuilder: knitr
